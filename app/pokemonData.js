@@ -6,9 +6,9 @@ function getJSON() {
 			var data = xhr.responseText;
 			var pokemon = JSON.parse(data);
 			// innerText does not let the attacker inject HTML elements.
-			document.getElementById("pokemonName").innerText = ____________;
-			document.getElementById("pokemonWeight").innerText = ___________;
-			document.getElementById("pokemonHeight").innerText = _____________;
+			document.getElementById("pokemonName").innerText = pokemon.name;
+			document.getElementById("pokemonWeight").innerText = pokemon.weight;
+			document.getElementById("pokemonHeight").innerText = pokemon.height;
 		}
 	}
 	xhr.send();
